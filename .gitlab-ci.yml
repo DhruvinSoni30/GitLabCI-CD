@@ -1,0 +1,26 @@
+stages:
+  - build
+  - test
+  - deploy
+
+Update_Repo:
+  stage: build
+  script:
+    - echo "We are currently in the build stage"
+    - echo "We will update the repository"
+    - apt update -y
+
+Display_Code:
+  stage: test
+  script:
+    - echo "We are currently in the test stage"
+    - echo "This stage will display the content of code"
+    - cat test.py
+
+Run_Code:
+  stage: deploy
+  script:
+    - echo "We are currently in the deploy stage"
+    - echo "Running the python script"
+    - python3 test.py
+
