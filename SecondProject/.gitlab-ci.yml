@@ -1,0 +1,20 @@
+stages:
+  - build
+  - test
+  - deploy
+
+build_stage:
+  stage: build
+  script:
+    - echo "This Job will build the code"
+
+test_stage:
+  stage: test
+  script:
+    - echo "This job will test the code"
+
+deploy_stage:
+  stage: deploy
+  script:
+    - echo "This job will deploy the code into the production environment"
+
