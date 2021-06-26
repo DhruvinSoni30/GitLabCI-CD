@@ -3,4 +3,3 @@ demo_job:
     - first
   script:
     - echo Hello World.!!
-
